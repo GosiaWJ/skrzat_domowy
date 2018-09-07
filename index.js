@@ -3,7 +3,7 @@ const path = require('path');
 
 const bot = new commando.Client({
 	commandPrefix: '$', 	//Gosia's Oryginal Bot Assistant
-	owner: 'process.env.BOT_OWNER',
+	owner: process.env.BOT_OWNER,
 	disableEveryone: true
 });
 
@@ -25,4 +25,4 @@ bot.on('message', async message => {
 });
 
 
-bot.login('process.env.BOT_TOKEN'); 
+bot.login(process.env.BOT_TOKEN); 
