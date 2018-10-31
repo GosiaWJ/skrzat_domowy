@@ -166,28 +166,28 @@ function getMoonPhase(year, month, day)
 function getWeatherNames(nb){   
     var name = '';
     switch(nb){
-        case 1:
+        case 6:
             name = 'słońce :sunny: ';
             break;
-        case 2: 
+        case 3: 
             name = 'mgła :fog: ';
             break;
-        case 3:
+        case 8:
             name = 'grad :sweat_drops: ';
             break;
-        case 4:
+        case 2:
             name = 'burza :thunder_cloud_rain: ';
             break;
         case 5:
             name = 'deszcz :cloud_rain: ';
             break;
-        case 6: 
+        case 1: 
             name = 'huragan :cloud_tornado: ';
             break;
-        case 7:
+        case 4:
             name = 'zachmurzenie :white_sun_cloud: ';
             break;
-        case 8:
+        case 7:
             name = 'umiarkowany wiatr :wind_blowing_face: ';
             break;
         default:
@@ -196,7 +196,9 @@ function getWeatherNames(nb){
     return name;
 }
 function getDailyWeather(season) {
-    var roll_1 = Math.floor(Math.random() *8) + 1;
+    var roll_1 = Math.floor((Math.floor(Math.random() *8) + Math.floor(Math.random() *8) + Math.floor(Math.random() 
+
+*8) + 3)/3);
     var roll_2 = 0;
     var weather = '';
     switch(season){
@@ -215,10 +217,10 @@ function getDailyWeather(season) {
             weather = roll_2 + ' stopni ' + getWeatherNames(roll_1);
             break;
         case 4:
-            if (roll_1 === 3) {
+            if (roll_1 === 8) {
                 roll_2 = Math.floor(Math.random() *10) - 10;
                 weather = roll_2 + ' stopni śnieg :cloud_snow: ';
-            } else if (roll_1 === 4) {
+            } else if (roll_1 === 2) {
                 roll_2 = Math.floor(Math.random() *10) - 10;
                 weather = roll_2 + ' stopni burza śnieżna :cloud_lightning: ';
             } else if (roll_1 === 5) {
