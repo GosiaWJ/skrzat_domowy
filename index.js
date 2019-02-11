@@ -18,9 +18,9 @@ bot.registry
 
 bot.on('message', async message => {
 
-    if (message.content == 'ping') { //jezeli ktos napisze na kanale "ping"
-        message.channel.sendMessage('pong'); // odpisz na kanale "pong"
-    }
+//    if (message.content == 'ping') { //jezeli ktos napisze na kanale "ping"
+//        message.channel.sendMessage('pong'); // odpisz na kanale "pong"
+//    }
 
 });
 
